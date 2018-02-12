@@ -1,0 +1,40 @@
+# vagrant stuff
+database/*.sql
+init/vhosts
+init/certs
+
+# ignore these files
+.DS_Store
+
+*/**/*.sql
+
+# logs
+npm-debug.log
+*/**/*.log
+*/**/vhosts
+
+# sublime and gulp dev files
+*/**/*.sublime-project
+*/**/*.sublime-workspace
+*/**/bower_components/
+*/**/node_modules/
+*/**/vendor/
+
+# Composer stuff
+composer.lock
+vendor
+htdocs/app
+
+
+# env file
+env
+.env
+
+# WordPress stuff
+
+# uploads
+htdocs/wp-content/uploads/
+
+
+#mu-plugins
+htdocs/wp-content/
