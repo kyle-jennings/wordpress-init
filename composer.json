@@ -17,7 +17,7 @@
         }
     },
     "extra": {
-        "wordpress-install-dir": "htdocs/wordpress",
+        "wordpress-install-dir": "htdocs/wordpress"
     }
 }
 
