@@ -1,5 +1,5 @@
 {
-    "name": "WordPress Foundation",
+    "name": "WordPress Init",
     "description": "12 factor WordPress template",
     "repositories":[
         {

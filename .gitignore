@@ -38,4 +38,5 @@ htdocs/wp-content/uploads/
 
 #mu-plugins
 htdocs/wp-content/
+htdocs/wp-content.bak/
 htdocs/wordpress/
