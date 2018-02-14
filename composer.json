@@ -13,11 +13,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Dotenv\\": "vendor/vlucas/phpdotenv/src"
+            "Dotenv\\": "vendor/vlucas/phpdotenv/src",
+            "WordPressInit\\" : "./"
         }
     },
     "extra": {
         "wordpress-install-dir": "htdocs/wordpress"
+    },
+    "scripts" : {
+        "post-install-cmd" : "WordPressInit\\postInstall::init"
     }
 }
 

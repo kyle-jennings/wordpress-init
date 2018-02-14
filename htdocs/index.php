@@ -2,4 +2,4 @@
 
 
 define( 'WP_USE_THEMES', true );
-require( './app/wp-blog-header.php' );
+require( './wordpress/wp-blog-header.php' );

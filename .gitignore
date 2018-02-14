@@ -30,7 +30,10 @@ htdocs/app
 env
 .env
 
-# WordPress stuff
+# confiugs
+htdocs/.htaccess
+htdocs/manifest.json
+htdocs/service-worker.js
 
 # uploads
 htdocs/wp-content/uploads/
@@ -38,5 +41,4 @@ htdocs/wp-content/uploads/
 
 #mu-plugins
 htdocs/wp-content/
-htdocs/wp-content.bak/
 htdocs/wordpress/

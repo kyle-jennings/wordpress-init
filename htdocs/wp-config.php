@@ -1,22 +1,22 @@
 <?php
 
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv( dirname(dirname(__DIR__)) );
 $dotenv->load();
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', $_ENV['database'] );
+define( 'DB_NAME', $_ENV['DB_NAME'] );
 
 /** MySQL database username */
-define( 'DB_USER', $_ENV['user'] );
+define( 'DB_USER', $_ENV['DB_USER'] );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', $_ENV['pass'] );
+define( 'DB_PASSWORD', $_ENV['DB_PASSWORD'] );
 
 /** MySQL hostname */
-define( 'DB_HOST', $_ENV['host'] );
+define( 'DB_HOST', $_ENV['DB_HOST'] );
 
 
 /**#@+
