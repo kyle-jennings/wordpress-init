@@ -34,6 +34,8 @@ env
 htdocs/.htaccess
 htdocs/manifest.json
 htdocs/service-worker.js
+htdocs/extras.php
+
 
 # uploads
 htdocs/wp-content/uploads/

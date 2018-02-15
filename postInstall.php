@@ -17,6 +17,7 @@ class postInstall {
         self::cloanRepo();
         self::runComposer();
         self::moveRootFiles();
+        self::moveHtAccess();
     }
 
 
@@ -74,6 +75,14 @@ class postInstall {
 
         if(!is_readable($src . DIRECTORY_SEPARATOR . '.htaccess'))
             copy($dst . DIRECTORY_SEPARATOR . '.htaccess-template', $dst . DIRECTORY_SEPARATOR . '.htaccess')
+    }
+
+
+    static public function moveHtAccess()
+    {
+        $src = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/.htaccess';
+        if(!is_readable($src)){
+            copy($src . DIRECTORY_SEPARATOR . '.htaccess-template', $src . DIRECTORY_SEPARATOR . '.htaccess')
     }
 
 
