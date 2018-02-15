@@ -11,7 +11,7 @@ $dotenv->load();
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = $_ENV['TABLE_PREFIX'];
+$table_prefix = isset($_ENV['TABLE_PREFIX']) ? $_ENV['TABLE_PREFIX'] : 'wp_';
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
