@@ -14,10 +14,9 @@ class postInstall {
 
     static public function init()
     {
-        self::cloanRepo();
+        self::cloneRepo();
         self::runComposer();
         self::moveRootFiles();
-        self::moveHtAccess();
     }
 
 
@@ -25,8 +24,9 @@ class postInstall {
      * Download the repo from the env file
      * @return [type] [description]
      */
-    static public function cloanRepo() {
+    static public function cloneRepo() {
 
+        echo "Cloning the repo \n";
         $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs';
         if( !isset($_ENV['GITHUB']) || is_readable($dst . '/wp-content') )
             return;
@@ -44,6 +44,7 @@ class postInstall {
     static public function runComposer() 
     {
 
+        echo "Running composer on downloaded project \n";
         $cmd = 'cd ' .  dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/wp-content;';
         $cmd .= ' composer install -n';
 
@@ -62,9 +63,10 @@ class postInstall {
         $src = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/wp-content/root';
         $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs';
 
+        echo "Moving applicable files to htdocs (web root) \n";
+
         if(!is_readable($src)){
             echo('no root folder found.');
-            copy($dst . DIRECTORY_SEPARATOR . '.htaccess-template', $dst . DIRECTORY_SEPARATOR . '.htaccess')
             return;
         }
 
@@ -72,17 +74,6 @@ class postInstall {
             $src,
             $dst
         );
-
-        if(!is_readable($src . DIRECTORY_SEPARATOR . '.htaccess'))
-            copy($dst . DIRECTORY_SEPARATOR . '.htaccess-template', $dst . DIRECTORY_SEPARATOR . '.htaccess')
-    }
-
-
-    static public function moveHtAccess()
-    {
-        $src = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/.htaccess';
-        if(!is_readable($src)){
-            copy($src . DIRECTORY_SEPARATOR . '.htaccess-template', $src . DIRECTORY_SEPARATOR . '.htaccess')
     }
 
 
