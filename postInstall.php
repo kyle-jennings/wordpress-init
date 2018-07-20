@@ -27,7 +27,7 @@ class postInstall {
     static public function cloneRepo() {
 
         echo "Cloning the repo \n";
-        $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs';
+        $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'public_html';
         if( !isset($_ENV['GITHUB']) || is_readable($dst . '/wp-content') )
             return;
 
@@ -45,7 +45,7 @@ class postInstall {
     {
 
         echo "Running composer on downloaded project \n";
-        $cmd = 'cd ' .  dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/wp-content;';
+        $cmd = 'cd ' .  dirname(__FILE__) . DIRECTORY_SEPARATOR . 'public_html/wp-content;';
         $cmd .= ' composer install -n';
 
         shell_exec($cmd);
@@ -53,17 +53,17 @@ class postInstall {
 
 
     /**
-     * Move any files from the "root" folder up to htdocs
+     * Move any files from the "root" folder up to public_html
      *
      * These are usuall just a htaccess file, and webapp stuff
      * @return [type] [description]
      */
     static public function moveRootFiles() {
 
-        $src = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs/wp-content/root';
-        $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'htdocs';
+        $src = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'public_html/wp-content/root';
+        $dst = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'public_html';
 
-        echo "Moving applicable files to htdocs (web root) \n";
+        echo "Moving applicable files to public_html (web root) \n";
 
         if(!is_readable($src)){
             echo('no root folder found.');

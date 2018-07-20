@@ -23,7 +23,7 @@ npm-debug.log
 # Composer stuff
 composer.lock
 vendor
-htdocs/app
+public_html/app
 
 
 # env file
@@ -31,16 +31,16 @@ env
 .env
 
 # confiugs
-htdocs/.htaccess
-htdocs/manifest.json
-htdocs/service-worker.js
-htdocs/extras.php
+public_html/.htaccess
+public_html/manifest.json
+public_html/service-worker.js
+public_html/extras.php
 
 
 # uploads
-htdocs/wp-content/uploads/
+public_html/wp-content/uploads/
 
 
 #mu-plugins
-htdocs/wp-content/
-htdocs/wordpress/
+public_html/wp-content/
+public_html/wordpress/

@@ -2,26 +2,32 @@
     "name": "WordPress Init",
     "description": "12 factor WordPress template",
     "repositories":[
-        {
-            "type":"composer",
-            "url":"https://wpackagist.org"
-        }
+      {
+        "type":"composer",
+        "url":"https://wpackagist.org"
+      }
     ],
     "require":{
-        "johnpbloch/wordpress": "*",
-        "vlucas/phpdotenv" : "dev-master"
+      "johnpbloch/wordpress": "*",
+      "vlucas/phpdotenv" : "dev-master",
+      "wpackagist-theme/twentyseventeen":"1.6"
     },
     "autoload": {
-        "psr-4": {
-            "Dotenv\\": "vendor/vlucas/phpdotenv/src",
-            "WordPressInit\\" : "./"
-        }
+      "psr-4": {
+        "Dotenv\\": "vendor/vlucas/phpdotenv/src",
+        "WordPressInit\\" : "./"
+      }
     },
     "extra": {
-        "wordpress-install-dir": "htdocs/wordpress"
+      "wordpress-install-dir": "public_html/wordpress",
+      "installer-paths": {
+          "public_html/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+          "public_html/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"],
+          "public_html/wp-content/themes/{$name}": ["type:wordpress-theme"]
+      }
     },
     "scripts" : {
-        "post-install-cmd" : "WordPressInit\\postInstall::init"
+      "post-install-cmd" : "WordPressInit\\postInstall::init"
     }
 }
 
