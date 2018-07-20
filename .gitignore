@@ -24,7 +24,7 @@ npm-debug.log
 composer.lock
 vendor
 public_html/app
-
+package-lock.json
 
 # env file
 env
