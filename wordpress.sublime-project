@@ -1,0 +1,46 @@
+//The installed coding standards are MySource, PEAR, PSR1, PSR12, PSR2, Squiz, 
+//Zend, WordPress-VIP, WordPress, WordPress-Extra, WordPress-Docs and WordPress-Core
+{
+  "folders":
+  [
+    {
+      "path": ".",
+             "folder_exclude_patterns": [
+                "public_html/wp-admin",
+                "public_html/wp-includes",
+                "public_html/wp-content/themes/twentyseventeen",
+                "public_html/wp-content/themes/twentythirteen",
+                "public_html/wp-content/themes/twentytwelve",
+                "public_html/wp-content/plugins",
+            ],
+            "file_include_patterns": [
+                ".eslintrc",
+                ".gitignore",
+                ".sasslintrc",
+                "composer*",
+                "wordpress.sublime-project",
+                "init.sh",
+                "package.json",
+                "phpcs.xml",
+                "README.md",
+                "wp-cli*",
+                "public_html/.htaccess",
+                "public_html/index.php",
+                "public_html/wp-config.php",
+                "public_html/wp-content/*",
+                "public_html/wp-content/themes/epi/*",
+                "public_html/wp-content/mu-plugins/*",
+                "public_html/wp-content/plugins/*",
+                "public_html/reports/*",
+            ]
+    }
+  ],
+    
+    "settings": {
+        "SublimeLinter.linters.phpcs.@disable": false, 
+        "SublimeLinter.linters.phpcs.args": [
+            "--standard=./phpcs.xml"
+        ], 
+        "SublimeLinter.linters.phpcs.excludes": []
+    }
+}

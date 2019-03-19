@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Custom">
+    <description>Wordpress, but without Yoda syntax.</description>
+    <rule ref="WordPress">
+        <exclude name="WordPress.PHP.YodaConditions"/>
+    </rule>
+</ruleset>

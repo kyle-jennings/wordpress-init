@@ -16,6 +16,7 @@ npm-debug.log
 # sublime and gulp dev files
 */**/*.sublime-project
 */**/*.sublime-workspace
+*.sublime-workspace
 */**/bower_components/
 */**/node_modules/
 */**/vendor/
