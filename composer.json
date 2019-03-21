@@ -19,15 +19,15 @@
       }
     },
     "extra": {
-      "wordpress-install-dir": "public_html/wordpress",
+      "wordpress-install-dir": "public/wordpress",
       "installer-paths": {
-          "public_html/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
-          "public_html/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"],
-          "public_html/wp-content/themes/{$name}": ["type:wordpress-theme"]
+          "public/content/plugins/{$name}": ["type:wordpress-plugin"],
+          "public/content/mu-plugins/{$name}": ["type:wordpress-muplugin"],
+          "public/content/themes/{$name}": ["type:wordpress-theme"]
       }
     },
     "scripts" : {
-      "post-install-cmd" : "WordPressInit\\postInstall::init"
+      "post-install-cmd" : "WordPressInit\\PostInstall::init"
     }
 }
 
