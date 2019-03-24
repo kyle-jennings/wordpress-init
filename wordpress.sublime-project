@@ -6,12 +6,11 @@
     {
       "path": ".",
              "folder_exclude_patterns": [
-                "public/wp-admin",
-                "public/wp-includes",
-                "public//themes/twentyseventeen",
-                "public//themes/twentythirteen",
-                "public//themes/twentytwelve",
-                "public//plugins",
+                "public/wordpress",
+                "public/themes/twentyseventeen",
+                "public/themes/twentythirteen",
+                "public/themes/twentytwelve",
+                "public/plugins",
             ],
             "file_include_patterns": [
                 ".eslintrc",
@@ -28,10 +27,10 @@
                 "public/.htaccess",
                 "public/index.php",
                 "public/wp-config.php",
-                "public//*",
-                "public//themes/epi/*",
-                "public//mu-plugins/*",
-                "public//plugins/*",
+                "public/*",
+                "public/themes/epi/*",
+                "public/mu-plugins/*",
+                "public/plugins/*",
                 "public/reports/*",
             ]
     }
