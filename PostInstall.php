@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * I have no idea why I build this or what it is for. #bestPracitces!
+ * 
+ * It appears that this is so you could package a root level sibling app or folder
+ * to be moved to the public root.  Perhaps for things like a custom uploads 
+ * folder or something of that nature.
+ */
 namespace wordpressInit;
 
 require_once './vendor/autoload.php';
@@ -15,7 +21,6 @@ class PostInstall {
 		self::runComposer();
 		self::moveRootFiles();
 	}
-
 
 	/**
 	 * Download the repo from the env file
